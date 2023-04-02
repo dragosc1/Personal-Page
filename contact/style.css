@@ -40,6 +40,31 @@ li:hover ul.dropdown {
     display: block;
 }
 
+.typing {
+    display: inline-block;
+}
+
+/* animation text */
+.text {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 1.2s steps(19),
+        cursor .4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+/* typing effect */
+@keyframes typing {
+    from { width: 0 }
+}
+
 /* usefull classes */
 .dflex {
     display: flex;
@@ -68,13 +93,24 @@ li:hover ul.dropdown {
 .section {
     text-align: center;
     padding: 30px;
-    font-size: 52px;
+    font-size: 50px;
 }
 .contact-info {
-    margin-left: 20%;
-    margin-right: 20%;
     margin-top: 5%;
-    font-size: 18px;
+    font-size: 28px;
+}
+.grid-row {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 5px;
+}
+.grid-col {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.img-grid-size {
+    height: 35px;
+    width: 35px;
 }
 footer {
     position: fixed;
@@ -82,4 +118,15 @@ footer {
     padding: 15px 0px;
     text-align: center;
     width: 100%;
+}
+@media only screen and (max-width: 800px) {
+    body div, footer {
+        font-size: 1rem;
+    }
+    .text, .section {
+        font-size: 28px;
+    }
+    ul li {
+        font-size: 15px;
+    }
 }

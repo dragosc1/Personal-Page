@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="https://use.typekit.net/ffd6mje.css">
 </head>
 <body>  
+    <input type="checkbox" id="toggle"> 
     <header>
         <div class="dflex hcenter links">
-            <h1>Welcome to my page!</h1>
-            <ul class="dflex ul1">
-                <li><a class="nodecoration" href="index.html">Home</a></li>
-                <li>
-                    <a href="#" class="nodecoration">Projects ▼</a>
+            <div class="typing">
+                <h1 class="text">Welcome to my page!</h1>
+            </div> 
+            <label class="navbar-toggler" for="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="dflex ul1 nav-list">
+                <li class="nav-item"><a class="nodecoration nav-link" href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nodecoration nav-link">Projects ▼</a>
                     <ul class="dropdown">
                         <li><a href="https://github.com/dragosc1/Snake-with-POWER-UPS" class="nodecoration">Snake</a></li>
                         <li><a href="https://dragosc1.github.io/calculator/" class="nodecoration">Calculator</a></li>
@@ -22,7 +30,7 @@
                         <li><a href="https://github.com/dragosc1/Wordle-Proiect" class="nodecoration">Wordle</a></li>
                     </ul>
                 </li>
-                <li><a class="nodecoration" href="../contact/contact.html">Contact</a></li>
+                <li class="nav-item "><a class="nodecoration nav-link" href="../contact/contact.html">Contact</a></li>
             </ul>
         </div>
         <div class="dflex content">
@@ -32,7 +40,7 @@
                 <a href="https://www.linkedin.com/in/drago%C8%99-ciobanu-400453246/" class="linkedin nodecoration"> Linked<img class = "linkedin_logo" src="../images/linkedin_logo.png" alt="linkedin logo"></a>
             </div>
             <div class="dflex ocenter image-me">
-                <img class="me" src="../images/me.jpg" altt="image of myself">
+                <img class="me" src="../images/me.jpg" alt="image of myself">
             </div>
         </div>
     </header>
