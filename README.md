@@ -1,1 +1,1 @@
-Created a simple landing page template using HTML/CSS
+Created my own personal site using HTML/CSS
