@@ -138,10 +138,11 @@ p {
     list-style-type: none;
     gap: 20px;
 }
-.section {
+.section_title {
     color: #1F2937;
     text-align: center;
     padding: 30px;
+    font-size: 30px;
 }
 .projects {
     height: 330px;
@@ -188,7 +189,7 @@ footer {
     margin-bottom: 100px;
     padding: 70px;
 }
-.quotet {
+.quote_style_1 {
     color: #1F2937; 
     width: 100%; 
     margin-left: auto; 
@@ -197,7 +198,7 @@ footer {
     font-style: italic;
     text-align: center;
 }
-.quotet2 {
+.quote_style_2 {
     color: #1F2937; 
     text-align: right;
     width: 100%;
@@ -214,7 +215,7 @@ footer {
     body div, footer {
         font-size: 1rem;
     }
-    .text, .section {
+    .text, .section_title {
         font-size: 25px;
     }
     ul li {
