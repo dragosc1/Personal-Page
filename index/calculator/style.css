@@ -1,0 +1,137 @@
+/* Root design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: rgb(58, 58, 58);
+    cursor: default;
+}
+/* Calculator design */
+.container {
+    border-right: 9px solid rgb(53, 53, 53);
+    border-bottom: 9px solid rgb(72, 72, 72);
+    width: 410px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 7px;
+    border-radius: 20px;
+    font-size: 30px;
+    background: gray;
+}
+/* ON/CE button design */
+.ONCE {
+    background: rgb(101, 218, 101);
+    padding: 5px; 
+    border-radius: 7px; 
+    border-right: 3px solid rgb(87, 87, 87); 
+    border-bottom: 3px solid rgb(87, 87, 87);
+    margin-bottom: 10px;
+}
+.ONCE:hover {
+    background: rgb(133, 255, 133);
+}
+/* OFF button  design*/
+.OFF {
+    background: rgb(255, 59, 59); 
+    padding: 3px; border-radius: 7px; 
+    border-right: 3px solid rgb(87, 87, 87); 
+    border-bottom: 3px solid rgb(87, 87, 87);
+    height: 47.33px;
+    display: flex;
+    align-items: center;
+}
+.OFF:hover {
+    background: rgb(253, 135, 135);
+}
+/* Display screen design */
+.screen {
+    height: 95px;
+    width: 400px;
+    margin-bottom: 6px;
+    background: cyan;
+    border-radius: 7px;
+    margin-bottom: 17px;
+    border: 2px solid rgb(110, 192, 192);
+    display: flex;
+    justify-content: right;
+    font-size: 27px;
+}
+/* Button coloms design */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.firstcolum, .secondcolum, .thirdcolum, .fourthcolum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.title {
+    text-align: center;
+    font-size: 50px;
+    color : black;
+    margin-bottom: 30px;
+}
+/* Buttons design */
+.zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid rgb(87, 87, 87);
+    border-bottom: 3px solid rgb(87, 87, 87);
+}
+.zero:hover, .one:hover, .two:hover, .three:hover, .four:hover, .five:hover, .six:hover, .seven:hover, .eight:hover, .nine:hover {
+    background: rgb(243, 243, 243);
+}
+.sqrt, .divide, .modulo, .times, .substract, .point {
+    background: rgb(189, 189, 189);
+    padding: 5px;
+    width: 55px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid rgb(87, 87, 87);
+    border-bottom: 3px solid rgb(87, 87, 87);
+}
+.sqrt:hover, .divide:hover, .modulo:hover, .times:hover, .substract:hover, .point:hover {
+    background: rgb(206, 206, 206);
+}
+.add {
+    background:cyan;
+    padding: 5px;
+    width: 55px;
+    border-radius: 5px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid rgb(87, 87, 87);
+    border-bottom: 3px solid rgb(87, 87, 87);
+}
+.add:hover {
+    background:#96ffff;
+}
+.equal {
+    background:yellow;
+    padding: 5px;
+    width: 55px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid rgb(87, 87, 87);
+    border-bottom: 3px solid rgb(87, 87, 87);
+}
+.equal:hover {
+    background:rgb(255, 255, 161);
+}
