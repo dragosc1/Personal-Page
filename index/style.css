@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    color: white;
+    color:white;
     font-family: roboto;
 }
 
@@ -156,8 +156,13 @@ p {
     gap: 5%;
 }
 .container {    
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.container2 {
+    padding-left: 30%;
+    padding-right: 30%;
+    font-size: 20px;
 }
 .img {
     height: 200px;
@@ -188,13 +193,32 @@ footer {
     text-align: center;
     width: 100%;
 }
-
+label {
+    color: black;
+}
+button {
+    color: black;
+    padding: 3px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+input, textarea {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 3px;
+}
 /* quote atributes */
 .quote {
     background: #E5E7EB;
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 70px;
+}
+.form-content {
+    display: flex;
+    align-items: center;
+    gap: 21%;
 }
 .quote-style-1 {
     color: #1F2937; 
@@ -212,10 +236,10 @@ footer {
     margin-right: auto;
     margin-left: auto;
 }
-.quotet::before {
+.quote-style-1::before {
     content:"\""
 }
-.quotet::after {
+.quote-style-1::after {
     content:"\""
 }
 .iframe-styling-1 {
@@ -272,21 +296,21 @@ footer {
     header .navbar-toggler {
         display: grid !important;
     }
-    input:checked ~ header .nav-list {
+    input#toggle:checked ~ header .nav-list {
         transform: translateY(0);
         z-index: 0;
     } 
-    input:checked ~ header .navbar-toggler {
+    input#toggle:checked ~ header .navbar-toggler {
         margin-top: 35px;
     }
-    input:checked ~ header .navbar-toggler .bar:nth-child(1) {
+    input#toggle:checked ~ header .navbar-toggler .bar:nth-child(1) {
         position: absolute;
         transform: rotate(45deg);
     }
-    input:checked ~ header .navbar-toggler .bar:nth-child(2) {
+    input#toggle:checked ~ header .navbar-toggler .bar:nth-child(2) {
         display: none;
     }
-    input:checked ~ header .navbar-toggler .bar:nth-child(3) {
+    input#toggle:checked ~ header .navbar-toggler .bar:nth-child(3) {
         transform: rotate(-45deg);
     }
     header .navbar-toggler {
@@ -307,6 +331,6 @@ footer {
         width:300px;
     }
 }
-input {
+.dnone {
     display: none;
 }
