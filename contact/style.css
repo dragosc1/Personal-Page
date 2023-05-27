@@ -78,6 +78,10 @@ li:hover ul.dropdown {
 .nodecoration {
     text-decoration: none;
 }
+#dynamicContent {
+    margin-top: 7%;
+    text-align: center;
+}
 .ul1 {
     list-style-type: none;
     gap: 20px;

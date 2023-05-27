@@ -144,6 +144,12 @@ p {
     padding: 30px;
     font-size: 30px;
 }
+.section-title2 {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
 .section-subtitle {
     color: #1F2937;
     text-align: center;
@@ -160,9 +166,12 @@ p {
     padding-right: 3%;
 }
 .container2 {
+    margin-top: 12.5%;
     padding-left: 30%;
     padding-right: 30%;
     font-size: 20px;
+    padding-bottom: 30px;
+    background: #1F2937;
 }
 .img {
     height: 200px;
@@ -193,21 +202,20 @@ footer {
     text-align: center;
     width: 100%;
 }
-label {
-    color: black;
-}
+
 button {
-    color: black;
     padding: 3px;
     font-size: 15px;
     margin-top: 10px;
+    color: black;
 }
 input, textarea {
-    color: black;
     margin-bottom: 10px;
     font-size: 15px;
     padding: 3px;
+    color:black;
 }
+
 /* quote atributes */
 .quote {
     background: #E5E7EB;
@@ -260,7 +268,7 @@ input, textarea {
     body div, footer {
         font-size: 1rem;
     }
-    .text, .section-title {
+    .text, .section-title, .section.title2 {
         font-size: 25px;
     }
     ul li {

@@ -22,9 +22,8 @@ function randomRGB() {
 const begin = document.querySelector('.begin');
 begin.addEventListener('click', function() {
     STOP = 0;
-    const grid = document.querySelectorAll('.cell');
-    grid.forEach(cell => cell.addEventListener('mouseover', function(e) {
-        if (!STOP)
+    container.addEventListener('mouseover', function(e) {
+        if (!STOP && e.target.classList.contains("cell")) 
             if (!e.target.style.backgroundColor) {
                 e.target.style.backgroundColor = randomRGB();
                 e.target.value = 100;
@@ -36,7 +35,7 @@ begin.addEventListener('click', function() {
                     e.target.value = now;
                 }
             }
-    }));
+    });
 });
 
 // STOP DRAWING 

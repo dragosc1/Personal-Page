@@ -6,6 +6,7 @@
     <title>Personal Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ffd6mje.css">
+    <script src="logic.js" defer></script>
 </head>
 <body>  
     <input type="checkbox" id="toggle" class="dnone"> 
@@ -83,9 +84,15 @@
             </div>
         </section>
     </section>
+    <section>
+        <div class="quote">
+            <h1 class="quote-style-1">Logic will get you from A to B. Imagination will take you everywhere.</h1>
+            <h2 class="quote-style-2">~Albert Einstein</h2>
+        </div>
+    </section>
     <section class="container2">
-        <h1 class="section-title">Projects Feedback</h1>
-        <form>
+        <h1 class="section-title2">Projects Feedback</h1>
+        <form class="form">
             <div class="form-content">
                 <div class="info-content">
                     <label for="fname">First name:</label><br>
@@ -100,18 +107,11 @@
                     <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Be honest." required></textarea>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit-btn">Submit</button>
         </form>
     </section>
-    <section>
-        <div class="quote">
-            <h1 class="quote-style-1">Logic will get you from A to B. Imagination will take you everywhere.</h1>
-            <h2 class="quote-style-2">~Albert Einstein</h2>
-        </div>
-    </section>
-
     <footer>
-        <p>Copyright © Dragos Corp 2022</p>
+        <p class="copyright">Copyright © Dragos Corp </p>
     </footer>
 </body>
 </html>
