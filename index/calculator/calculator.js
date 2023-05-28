@@ -4,6 +4,7 @@ var result, last_result;
 const ON = document.querySelector('.ONCE');
 const screen = document.querySelector('.screen')
 ON.addEventListener('click', function(e) {
+    e.stopPropagation();
     // Clear the screen and reset variables
     screen.innerHTML = '';
     if (ON_OPERATION) {
@@ -18,6 +19,7 @@ ON.addEventListener('click', function(e) {
 // Turn off calculator
 const OFF = document.querySelector('.OFF');
 OFF.addEventListener('click', function(e) {
+    e.stopPropagation();
     screen.innerHTML = '';
 })
 // Select all digits and put them in an array
@@ -29,7 +31,8 @@ for (let i = 0; i < n; i++) {
     digits[i].value = i;
 }
 // Set event for touching digits
-digits.forEach(digit => digit.addEventListener('click', function() {
+digits.forEach(digit => digit.addEventListener('click', function(e) {
+    e.stopPropagation();
     // If the calculator is not ON, STOP
     if (!screen.innerHTML)
         return;
@@ -88,14 +91,12 @@ function modulo(a, b) {
     return a % b;
 }
 // Calculate the result
-function RESULT() {
+function RESULT(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
         return;
     if (ON_OPERATION == '')
         return;
-    // Create temporary variable in case of number too big
-    const aux = document.createElement('h1');
-    aux.innerText = last_result.innerText;
     document.querySelector(`.${ON_OPERATION}`).style.filter = '';
     if (ON_OPERATION == 'add') 
         result.innerText = `${add(last_result.innerText, result.innerText)}`;
@@ -127,6 +128,7 @@ function RESULT() {
 // Add 2 numbers
 const op_add = document.querySelector('.add');
 op_add.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
         return;
     if (ON_OPERATION != '') {
@@ -141,6 +143,7 @@ op_add.addEventListener('click', function(e) {
 // Substract operator
 const op_substract = document.querySelector('.substract');
 op_substract.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
         return;
     if (ON_OPERATION != '') {
@@ -155,6 +158,7 @@ op_substract.addEventListener('click', function(e) {
 // Multiplication of 2 numbers
 const op_times = document.querySelector('.times');
 op_times.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
         return;
     if (ON_OPERATION != '') {
@@ -169,6 +173,7 @@ op_times.addEventListener('click', function(e) {
 // Divide operator
 const op_divide = document.querySelector('.divide');
 op_divide.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
         return;
     if (ON_OPERATION != '') {
@@ -183,6 +188,7 @@ op_divide.addEventListener('click', function(e) {
 // Modulo operator (the rest of a / b)
 const op_modulo = document.querySelector('.modulo');
 op_modulo.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
        return;
     if (ON_OPERATION != '') {
@@ -197,14 +203,16 @@ op_modulo.addEventListener('click', function(e) {
 // Square root operator
 const op_sqrt = document.querySelector('.sqrt');
 op_sqrt.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
        return;
     ON_OPERATION = "sqrt";
-    RESULT();
+    RESULT(e);
 });
 // Point operator for real numbers
 const point = document.querySelector('.point');
 point.addEventListener('click', function(e) {
+    e.stopPropagation();
     if (!screen.innerHTML)
        return;
     let i, ok = 1;
@@ -217,3 +225,15 @@ point.addEventListener('click', function(e) {
 // Equal operator 
 const op_equal = document.querySelector('.equal');
 op_equal.addEventListener('click', RESULT);
+
+// tremble effect
+const container = document.querySelector(".container");
+container.addEventListener('click', function(e) {
+    container.classList.add('tremble-animation');
+
+    // Remove the tremble class after 0.5 seconds to reset the animation
+    setTimeout(function() {
+        container.classList.remove('tremble-animation');
+    }, 500);
+});
+
